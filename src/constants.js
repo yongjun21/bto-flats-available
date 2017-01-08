@@ -1,0 +1,30 @@
+export const Cookie = 'info-msg-D4408BB9B8F9B81C4825804B001E0AAB=true; info-msg-user-closed=false; JSESSIONIDP1=0000VVuGuJ9y_e4dMi2cvYUvHQx:19nr4sk5u; PD_STATEFUL_4b59ea50-9738-11e5-bed7-74fe48068c63=%2Fwebapp; BIGipServerhdb_rp_http_pool=!xh2iOZT4zA3idzdu4mvngqH3yga8utTbjhd8rj1Pjlbx4OIP/uOu9NyR381rfacltSp9Jd0oNaZywmA=; PD_STATEFUL_c1b1031a-94b2-11e5-8b7f-74fe48068c63=%2Fweb; _ga=GA1.3.44101907.1476973800; _gat=1; TS01170d4d=01e2ec192a77f27ace3e585cd62a86baa73ef50c702f96781ab2fa488420e3fe17ef936c1b6583067a9bf5b07f70c42f96feff80be2d3e115d3cf1ad17c8b577d2dabb9a202a3813bdda609860b79245e4b6377f2d'
+
+export const FLAT_LIST = {
+  '612A': ['612A', 'N6', 'C2B'],
+  '612B': ['612B', 'N6', 'C2B'],
+  '613A': ['613A', 'N6', 'C2B'],
+  '613B': ['613B', 'N6', 'C2B'],
+  '614A': ['614A', 'N6', 'C2B'],
+  '614B': ['614B', 'N6', 'C2B'],
+  '618A': ['618A', 'N6', 'C8'],
+  '618B': ['618B', 'N6', 'C8'],
+  '619A': ['619A', 'N6', 'C8'],
+  '619B': ['619B', 'N6', 'C8'],
+  '620A': ['620A', 'N6', 'C8'],
+  '620B': ['620B', 'N6', 'C8'],
+  '621A': ['621A', 'N6', 'C8'],
+  '621B': ['621B', 'N6', 'C8'],
+  '622A': ['622A', 'N6', 'C8'],
+  '622B': ['622B', 'N6', 'C8'],
+  '623A': ['623A', 'N6', 'C8'],
+  '623B': ['623B', 'N6', 'C8'],
+  '623C': ['623C', 'N6', 'C8'],
+  '624A': ['624A', 'N6', 'C8'],
+  '624B': ['624B', 'N6', 'C8'],
+  '625A': ['625A', 'N6', 'C8'],
+  '625B': ['625B', 'N6', 'C8'],
+  '626A': ['626A', 'N6', 'C8'],
+  '627A': ['627A', 'N6', 'C8'],
+  '627B': ['627B', 'N6', 'C8']
+}
