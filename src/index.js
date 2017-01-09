@@ -5,8 +5,23 @@ import csvStringify from 'csv-stringify/lib/sync'
 import groupBy from 'lodash/groupBy'
 import {FLAT_LIST, Cookie} from './constants'
 
+const regulator = {
+  delay: 100,
+  tail: Promise.resolve(),
+  push (fn, ...arg) {
+    this.tail = this.tail
+      .then(() => new Promise(resolve => {
+        setTimeout(resolve, this.delay)
+      }))
+      .then(() => fn(...arg))
+    return this.tail
+  }
+}
+
 const apiCalls = Object.keys(FLAT_LIST).map(key => {
-  return fetch(getUrl(...FLAT_LIST[key]), {headers: {'Accept-Encoding': 'gzip,deflate', Cookie}})
+  const url = getUrl(...FLAT_LIST[key])
+  const options = {headers: {'Accept-Encoding': 'gzip,deflate', Cookie}}
+  return regulator.push(fetch, url, options)
     .then(res => res.text())
     .then(html => {
       return html
@@ -57,9 +72,9 @@ function flatten (obj) {
   const arr = []
   Object.keys(obj).forEach(block => {
     Object.keys(obj[block]).forEach(unit => {
-      const booked = obj[block][unit].map(str => +str.split('-')[0]).join('/')
+      const booked = obj[block][unit].map(str => +str.split('-')[0])
       const noOfUnits = booked.length
-      arr.push({block, unit, noOfUnits, booked})
+      arr.push({block, unit, noOfUnits, booked: booked.join('/')})
     })
   })
   return arr
