@@ -11,9 +11,8 @@ const regulator = {
   push (fn, ...arg) {
     this.tail = this.tail
       .then(() => new Promise(resolve => {
-        setTimeout(resolve, this.delay)
+        setTimeout(resolve, this.delay, fn(...arg))
       }))
-      .then(() => fn(...arg))
     return this.tail
   }
 }
